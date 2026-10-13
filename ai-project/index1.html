@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .active {
+            background-color: #FF1F3D;
+            color: white;
+        }
+    </style>
+
+    <title>Phero Tube</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="w-11/12 mx-auto flex justify-between border-b-2 py-4 border-[#17171720]">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img class="w-[120px]" src="assets/Logo.png" alt="Phero Tube Logo">
+            </div>
+
+            <!-- Search -->
+            <div class="sort">
+                <label class="input">
+
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+
+                            <circle cx="11" cy="11" r="8"></circle>
+
+                            <path d="m21 21-4.3-4.3"></path>
+
+                        </g>
+
+                    </svg>
+
+                    <input id="search-input" type="search" placeholder="Search" />
+
+                </label>
+            </div>
+
+            <!-- Sort Button -->
+            <div class="blogs">
+                <button class="btn bg-[#FF1F3D] text-white">
+                    Sort by view
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Category Buttons -->
+    <nav id="category-container" class="flex py-5 justify-center gap-5">
+
+        <!-- All Button -->
+        <button id="btn-all" onclick="loadVideos()" class="btn btn-sm">
+
+            All
+
+        </button>
+
+    </nav>
+
+
+    <!-- Loader -->
+    <section id="loader" class="text-center py-10">
+
+        <span class="loading loading-dots loading-xl"></span>
+
+    </section>
+
+
+    <!-- Video Container -->
+    <section id="video-container" class="w-11/12 mx-auto ">
+        <!-- Sample 1 card -->
+
+        <div class="">
+            <!-- thumbnail card -->
+            <div>
+                <img class="w-96 rounded-md" src="https://i.ibb.co/NTncwqH/luahg-at-pain.jpg" alt="">
+            </div>
+
+            <!-- detail card -->
+            <div class="flex mt-2">
+
+                <!-- left -->
+                <div class="">
+                    <div class="avatar avatar-offline ">
+                        <div class="w-8 rounded-full">
+                            <img class="" alt="Tailwind-CSS-Avatar-component"
+                                src="https://img.daisyui.com/images/profile/demo/idiotsandwich@192.webp" />
+                        </div>
+                    </div>
+                </div>
+                <!-- right -->
+                <div class="ml-2 justify-center items-center gap-5">
+                    <h2 class="text-sm font-semibold">Shape of You</h2>
+                    <p class="text-sm text-gray-400 flex gap-1">alarafat <span><img class="w-4"
+                                src="https://img.icons8.com/?size=100&id=98A4yZTt9abw&format=png&color=000000"
+                                alt=""></span>
+                    </p>
+                    <p class="text-sm text-gray-400">91k views</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- sample 2nd card  -->
+
+        <!-- <div class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+                <img src="https://i.ibb.co/NTncwqH/luahg-at-pain.jpg" alt="Shoes" />
+            </figure>
+
+            <div class="card-body">
+                <h2 class="card-title">Card Title</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+
+            </div>
+        </div> -->
+
+        <!-- JavaScript will add video cards here -->
+
+    </section>
+
+
+    <!-- Video Details Modal -->
+    <dialog id="video_details" class="modal">
+
+        <div class="modal-box">
+
+            <!-- Video details will appear here -->
+            <div id="details-container"></div>
+
+
+            <!-- Close Button -->
+            <div class="modal-action">
+
+                <form method="dialog">
+
+                    <button class="btn">
+                        Close
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- JavaScript -->
+    <script src="script/index3.js"></script>
+
+</body>
+
+</html>
